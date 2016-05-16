@@ -8,9 +8,81 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ro.pub.cs.systems.pdsd.practicaltest02.PracticalTest02MainActivity" >
 
-    <TextView
+    <EditText
+        android:id="@+id/editTextPortServer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:text="3000" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/buttonCon"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextPortServer"
+        android:layout_alignBottom="@+id/editTextPortServer"
+        android:layout_toRightOf="@+id/editTextPortServer"
+        android:text="Con" />
+
+    <EditText
+        android:id="@+id/editTextPortClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextPortServer"
+        android:layout_below="@+id/buttonCon"
+        android:ems="10"
+        android:text="3000" />
+
+    <EditText
+        android:id="@+id/editTextAddr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextPortClient"
+        android:layout_below="@+id/editTextPortClient"
+        android:ems="10"
+        android:text="localhost" />
+
+    <EditText
+        android:id="@+id/editTextInfo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextAddr"
+        android:layout_below="@+id/editTextAddr"
+        android:ems="10"
+        android:text="44.1" />
+
+    <EditText
+        android:id="@+id/editTextInfo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextInfo1"
+        android:layout_below="@+id/editTextInfo1"
+        android:ems="10"
+        android:text="-9.9" />
+
+    <Button
+        android:id="@+id/buttonGet"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/editTextInfo2"
+        android:text="Get" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextInfo2"
+        android:layout_below="@+id/buttonGet"
+        android:layout_marginTop="33dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
